@@ -66,7 +66,7 @@ partial class Form1
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(391, 64);
         label1.TabIndex = 0;
-        label1.Text = "Лабораторная работа 1";
+        label1.Text = "Лабораторная работа 3";
         label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // label2
