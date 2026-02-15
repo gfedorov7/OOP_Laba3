@@ -1,5 +1,6 @@
 using System.Diagnostics.Contracts;
 using System.DirectoryServices.ActiveDirectory;
+using Laba1.service;
 using Laba1.Src.Subject;
 using Laba1.Src.util;
 
@@ -14,7 +15,7 @@ public partial class Form1 : Form
  
     private static bool isShowedInfo = false;
     
-    private HousingDepartment _instance;
+    private IHousingDepartmentMediator _mediator;
 
     public Form1()
     {
@@ -22,12 +23,10 @@ public partial class Form1 : Form
         Size = new Size(START_WINDOW_WIDTH, START_WINDOW_HEIGHT);
         MaximumSize = new Size(START_WINDOW_WIDTH, START_WINDOW_HEIGHT);
         MinimumSize = new Size(START_WINDOW_WIDTH, START_WINDOW_HEIGHT);
-        _instance = HousingDepartment.Instance;
-        _instance = HousingDepartment.Instance;
-        _instance = HousingDepartment.Instance;
-        _instance = HousingDepartment.Instance;
         panel2.Visible = false;
         tableLayoutPanel2.Visible = false;
+        
+        _mediator = new HousingDepartmentMediator();
     }
     
     private void FillValues()
@@ -35,53 +34,35 @@ public partial class Form1 : Form
         switch (comboBox_fields.SelectedIndex)
         {
             case 0:
-                _instance.District = textBox_district.Text;
+                _mediator.UpdateDistrict(textBox_district.Text);
                 break;
             case 1:
-                _instance.HousingDepartmentNumber = int.Parse(numericUpDown_housingDepartmentNumber.Text);
+                _mediator.UpdateHousingDepartmentNumber(int.Parse(numericUpDown_housingDepartmentNumber.Text));
                 break;
             case 2:
-                _instance.Residents = ParseResidents(textBox_residentName.Text, textBox_residentHouseNum.Text);
+                _mediator.UpdateResidents(textBox_residentName.Text, textBox_residentHouseNum.Text);
                 break;
             case 3:
-                _instance.PaidResidentsCount = int.Parse(numericUpDown_paidResidentsCount.Text);
+                _mediator.UpdatePaidResidentsCount(int.Parse(numericUpDown_paidResidentsCount.Text));
                 break;
             case 4:
-                _instance.Tariff = double.Parse(numericUpDown_tariff.Text);
+                _mediator.UpdateTariff(double.Parse(numericUpDown_tariff.Text));
                 break;
             case 5:
-                _instance.Balance = numericUpDown_balance.Value;
+                _mediator.UpdateBalance(numericUpDown_balance.Value);
                 break;
             case 6:
-                _instance.EmployeeCount = int.Parse(numericUpDown_employeeCount.Text);
+                _mediator.UpdateEmployeeCount(int.Parse(numericUpDown_employeeCount.Text));
                 break;
         }
         
         label_saved_status.Visible = true;
-        label_show_info.Text = _instance.ToString();
+        label_show_info.Text = _mediator.GetDepartmentInfo();
         if (!isShowedInfo)
         {
             button_show.Text = "Скрыть информацию";
             isShowedInfo = true;
         }
-    }
-    
-    private Resident[] ParseResidents(string textBox_residentNames, string residentNumberHouse)
-    {
-        string[] splitNames = textBox_residentNames.Split(';');
-        string[] splitNumber = residentNumberHouse.Split(';');
-        
-        if (splitNames.Length != splitNumber.Length)
-            throw new IndexOutOfRangeException();
-        
-        Resident[] residents = new Resident[splitNames.Length];
-        for (int i = 0; i < splitNames.Length; i++)
-        {
-            int num = int.Parse(splitNumber[i]);
-            residents[i] = new Resident(num, splitNames[i]);
-        }
-        
-        return residents;
     }
     
     private void comboBox_fields_SelectedIndexChanged(object sender, EventArgs e)
@@ -136,7 +117,7 @@ public partial class Form1 : Form
     {
         if (!isShowedInfo)
         {
-            label_show_info.Text = _instance.ToString();
+            label_show_info.Text = _mediator.GetDepartmentInfo();
             button_show.Text = "Скрыть информацию";
         }
         else
