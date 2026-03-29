@@ -1,6 +1,6 @@
-﻿using Laba1.src.exception;
+﻿using Laba5.src.exception;
 
-namespace Laba1.Src.Subject;
+namespace Laba5.Src.Subject;
 
 /// <summary>
 /// Класс, представляющий жилищный департамент (ЖЭК).

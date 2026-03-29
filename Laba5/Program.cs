@@ -1,4 +1,4 @@
-namespace Laba1;
+namespace Laba5;
 
 static class Program
 {

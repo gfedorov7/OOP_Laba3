@@ -1,5 +1,5 @@
-﻿using Laba1.src.exception;
-using Laba1.Src.Subject;
+﻿using Laba5.src.exception;
+using Laba5.Src.Subject;
 
 [TestClass]
 public sealed class HousingDepartmentTests

@@ -1,4 +1,4 @@
-﻿namespace Laba1.src.exception;
+﻿namespace Laba5.src.exception;
 
 /// <summary>
 /// Исключение, возникающее при некорректном количестве оплативших жильцов,

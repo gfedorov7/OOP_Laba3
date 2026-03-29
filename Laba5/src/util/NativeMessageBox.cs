@@ -1,4 +1,4 @@
-﻿namespace Laba1.Src.util;
+﻿namespace Laba5.Src.util;
 
 using System;
 using System.Runtime.InteropServices;

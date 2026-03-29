@@ -1,11 +1,11 @@
-﻿namespace Laba1;
+﻿namespace Laba5;
 
 partial class Form1
 {
     /// <summary>
     ///  Required designer variable.
     /// </summary>
-    private System.ComponentModel.IContainer components = null;
+    public System.ComponentModel.IContainer components = null;
 
     /// <summary>
     ///  Clean up any resources being used.
@@ -27,7 +27,7 @@ partial class Form1
     /// Required method for Designer support - do not modify
     /// the contents of this method with the code editor.
     /// </summary>
-    private void InitializeComponent()
+    public void InitializeComponent()
     {
         panel1 = new System.Windows.Forms.Panel();
         panel2 = new System.Windows.Forms.Panel();
@@ -468,49 +468,49 @@ partial class Form1
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.Panel panel3;
+    public System.Windows.Forms.Panel panel3;
 
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+    public System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 
-    private System.Windows.Forms.Panel panel2;
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+    public System.Windows.Forms.Panel panel2;
+    public System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+    public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
-    private System.Windows.Forms.Panel panel1;
+    public System.Windows.Forms.Panel panel1;
 
-    private System.Windows.Forms.TextBox textBox_residentName;
-    private System.Windows.Forms.TextBox textBox_residentHouseNum;
-    private System.Windows.Forms.TextBox textBox_district;
+    public System.Windows.Forms.TextBox textBox_residentName;
+    public System.Windows.Forms.TextBox textBox_residentHouseNum;
+    public System.Windows.Forms.TextBox textBox_district;
 
-    private System.Windows.Forms.NumericUpDown numericUpDown_housingDepartmentNumber;
-    private System.Windows.Forms.NumericUpDown numericUpDown_balance;
-    private System.Windows.Forms.NumericUpDown numericUpDown_paidResidentsCount;
+    public System.Windows.Forms.NumericUpDown numericUpDown_housingDepartmentNumber;
+    public System.Windows.Forms.NumericUpDown numericUpDown_balance;
+    public System.Windows.Forms.NumericUpDown numericUpDown_paidResidentsCount;
 
-    private System.Windows.Forms.NumericUpDown numericUpDown_employeeCount;
-    private System.Windows.Forms.NumericUpDown numericUpDown_tariff;
+    public System.Windows.Forms.NumericUpDown numericUpDown_employeeCount;
+    public System.Windows.Forms.NumericUpDown numericUpDown_tariff;
 
-    private System.Windows.Forms.ComboBox comboBox_fields;
+    public System.Windows.Forms.ComboBox comboBox_fields;
 
-    private System.Windows.Forms.Button button_exit;
+    public System.Windows.Forms.Button button_exit;
 
-    private System.Windows.Forms.Button button_show;
-    private System.Windows.Forms.Button button_save;
-    private System.Windows.Forms.Button button_prev;
+    public System.Windows.Forms.Button button_show;
+    public System.Windows.Forms.Button button_save;
+    public System.Windows.Forms.Button button_prev;
 
-    private System.Windows.Forms.Button button_next;
+    public System.Windows.Forms.Button button_next;
 
-    private System.Windows.Forms.Panel panel_delimiter;
+    public System.Windows.Forms.Panel panel_delimiter;
 
-    private System.Windows.Forms.Label label_laboratory_work;
-    private System.Windows.Forms.Label label_show_info;
-    private System.Windows.Forms.Label label_variant;
-    private System.Windows.Forms.Label label_name;
-    private System.Windows.Forms.Label label_group;
-    private System.Windows.Forms.Label label_change_info;
-    private System.Windows.Forms.Label label_saved_status;
+    public System.Windows.Forms.Label label_laboratory_work;
+    public System.Windows.Forms.Label label_show_info;
+    public System.Windows.Forms.Label label_variant;
+    public System.Windows.Forms.Label label_name;
+    public System.Windows.Forms.Label label_group;
+    public System.Windows.Forms.Label label_change_info;
+    public System.Windows.Forms.Label label_saved_status;
 
-    private System.Windows.Forms.Label label_output_info;
+    public System.Windows.Forms.Label label_output_info;
 
     #endregion
 }

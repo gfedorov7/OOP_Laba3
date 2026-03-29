@@ -1,4 +1,4 @@
-﻿namespace Laba1.Src.Subject;
+﻿namespace Laba5.Src.Subject;
 
 /// <summary>
 /// Класс, представляющий жильца.
